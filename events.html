@@ -1,0 +1,360 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#071f49" />
+    <meta
+      name="description"
+      content="Browse upcoming concerts, sports, and theater events from Fort Bend Tickets. Request tickets through our team — no online checkout."
+    />
+    <meta property="og:title" content="Upcoming Events | Fort Bend Tickets" />
+    <meta
+      property="og:description"
+      content="View upcoming live events and request tickets from Fort Bend Tickets, a Texas-based ticket broker."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://fortbendtickets.com/events.html" />
+    <meta property="og:image" content="https://fortbendtickets.com/assets/images/fort-bend-tickets-logo.jpeg" />
+    <link rel="canonical" href="https://fortbendtickets.com/events.html" />
+    <link rel="icon" href="assets/images/favicon.svg" type="image/svg+xml" />
+    <link rel="preconnect" href="https://images.unsplash.com" />
+    <link rel="stylesheet" href="assets/css/styles.css" />
+    <script src="assets/js/main.js" defer></script>
+    <title>Upcoming Events | Fort Bend Tickets</title>
+  </head>
+  <body>
+    <a class="skip-link" href="#main-content">Skip to main content</a>
+    <header class="site-header" data-header>
+      <div class="container header-inner">
+        <a class="brand" href="index.html" aria-label="Fort Bend Tickets home">
+          <img src="assets/images/fort-bend-tickets-logo.jpeg" alt="Fort Bend Tickets LLC" width="1024" height="1024" />
+        </a>
+        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-navigation" data-menu-toggle>
+          <span class="sr-only">Toggle navigation</span><span></span><span></span><span></span>
+        </button>
+        <nav id="site-navigation" class="site-nav" aria-label="Primary navigation" data-navigation>
+          <a href="index.html">Home</a>
+          <a class="is-active" href="events.html" aria-current="page">Events</a>
+          <a href="about.html">Who We Are</a>
+          <a href="services.html">Our Services</a>
+          <a class="nav-cta" href="contact.html">Let’s Talk</a>
+        </nav>
+      </div>
+    </header>
+
+    <main id="main-content">
+      <section class="page-hero events-hero">
+        <div class="page-hero-media" role="img" aria-label="Crowd at a live concert"></div>
+        <div class="hero-overlay"></div>
+        <div class="container page-hero-content">
+          <p class="eyebrow eyebrow-light">Upcoming events</p>
+          <h1>Find the live moment<br /><span>you’re looking for.</span></h1>
+          <p>Browse concerts, sports, and theater, then request tickets. Our team follows up with availability and next steps — there is no online checkout.</p>
+        </div>
+      </section>
+
+      <section class="notice-bar" aria-label="Important information">
+        <div class="container notice-inner">
+          <strong>How tickets work</strong>
+          <p>Select an event, then submit a request. We review availability and contact you directly.</p>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container">
+          <div class="section-heading split-heading">
+            <div>
+              <p class="eyebrow">Now showing</p>
+              <h2>Upcoming live events.</h2>
+            </div>
+            <p>These listings are samples while we prepare the live event calendar. Don’t see what you need? Contact us with the event details.</p>
+          </div>
+          <div class="event-filters" role="group" aria-label="Filter events by category">
+            <button type="button" class="is-active" data-event-filter="all" aria-pressed="true">All</button>
+            <button type="button" data-event-filter="concerts" aria-pressed="false">Concerts</button>
+            <button type="button" data-event-filter="sports" aria-pressed="false">Sports</button>
+            <button type="button" data-event-filter="theater" aria-pressed="false">Theater</button>
+          </div>
+          <div class="event-grid" data-event-grid>
+            <article class="event-card" data-event-category="concerts">
+              <div class="event-card-media">
+                <img
+                  src="assets/images/events/summer-sounds-festival.jpg"
+                  alt="Festival crowd under stage lights"
+                  width="900"
+                  height="600"
+                  loading="lazy"
+                />
+              </div>
+              <div class="event-card-body">
+                <span class="event-category">Concerts</span>
+                <h3>Summer Sounds Festival</h3>
+                <p class="event-meta">Sat, Sep 12, 2026 · 4:00 PM<br />Eleanor Tinsley Park, Houston, TX</p>
+                <a class="text-link text-link-dark" href="events/summer-sounds-festival.html">View details <span>→</span></a>
+              </div>
+            </article>
+            <article class="event-card" data-event-category="concerts">
+              <div class="event-card-media">
+                <img
+                  src="assets/images/events/sugar-land-country-night.jpg"
+                  alt="Live concert performer under stage lights"
+                  width="900"
+                  height="600"
+                  loading="lazy"
+                />
+              </div>
+              <div class="event-card-body">
+                <span class="event-category">Concerts</span>
+                <h3>Sugar Land Country Night</h3>
+                <p class="event-meta">Fri, Sep 25, 2026 · 8:00 PM<br />Smart Financial Centre, Sugar Land, TX</p>
+                <a class="text-link text-link-dark" href="events/sugar-land-country-night.html">View details <span>→</span></a>
+              </div>
+            </article>
+            <article class="event-card" data-event-category="sports">
+              <div class="event-card-media">
+                <img
+                  src="assets/images/events/friday-night-classic.jpg"
+                  alt="Athletes competing on a stadium field"
+                  width="900"
+                  height="600"
+                  loading="lazy"
+                />
+              </div>
+              <div class="event-card-body">
+                <span class="event-category">Sports</span>
+                <h3>Friday Night Classic</h3>
+                <p class="event-meta">Fri, Oct 3, 2026 · 7:00 PM<br />Rice Stadium, Houston, TX</p>
+                <a class="text-link text-link-dark" href="events/friday-night-classic.html">View details <span>→</span></a>
+              </div>
+            </article>
+            <article class="event-card" data-event-category="concerts">
+              <div class="event-card-media">
+                <img
+                  src="assets/images/events/downtown-arena-live.jpg"
+                  alt="Arena concert crowd facing a brightly lit stage"
+                  width="900"
+                  height="600"
+                  loading="lazy"
+                />
+              </div>
+              <div class="event-card-body">
+                <span class="event-category">Concerts</span>
+                <h3>Downtown Arena Live</h3>
+                <p class="event-meta">Sat, Oct 17, 2026 · 7:30 PM<br />Toyota Center, Houston, TX</p>
+                <a class="text-link text-link-dark" href="events/downtown-arena-live.html">View details <span>→</span></a>
+              </div>
+            </article>
+            <article class="event-card" data-event-category="sports">
+              <div class="event-card-media">
+                <img
+                  src="assets/images/events/gulf-coast-classic.jpg"
+                  alt="Night football game in a packed stadium"
+                  width="900"
+                  height="600"
+                  loading="lazy"
+                />
+              </div>
+              <div class="event-card-body">
+                <span class="event-category">Sports</span>
+                <h3>Gulf Coast Classic</h3>
+                <p class="event-meta">Sun, Oct 25, 2026 · 12:00 PM<br />NRG Stadium, Houston, TX</p>
+                <a class="text-link text-link-dark" href="events/gulf-coast-classic.html">View details <span>→</span></a>
+              </div>
+            </article>
+            <article class="event-card" data-event-category="theater">
+              <div class="event-card-media">
+                <img
+                  src="assets/images/events/broadway-at-wortham.jpg"
+                  alt="Theater stage with red curtains and lighting"
+                  width="900"
+                  height="600"
+                  loading="lazy"
+                />
+              </div>
+              <div class="event-card-body">
+                <span class="event-category">Theater</span>
+                <h3>Broadway at the Wortham</h3>
+                <p class="event-meta">Sat, Nov 8, 2026 · 8:00 PM<br />Wortham Theater Center, Houston, TX</p>
+                <a class="text-link text-link-dark" href="events/broadway-at-wortham.html">View details <span>→</span></a>
+              </div>
+            </article>
+            <article class="event-card" data-event-category="theater">
+              <div class="event-card-media">
+                <img
+                  src="assets/images/events/alley-theatre-premiere.jpg"
+                  alt="Musical theater performers on a lit stage"
+                  width="900"
+                  height="600"
+                  loading="lazy"
+                />
+              </div>
+              <div class="event-card-body">
+                <span class="event-category">Theater</span>
+                <h3>Alley Theatre Premiere</h3>
+                <p class="event-meta">Thu, Nov 12, 2026 · 7:30 PM<br />Alley Theatre, Houston, TX</p>
+                <a class="text-link text-link-dark" href="events/alley-theatre-premiere.html">View details <span>→</span></a>
+              </div>
+            </article>
+            <article class="event-card" data-event-category="sports">
+              <div class="event-card-media">
+                <img
+                  src="assets/images/events/hardwood-rivalry.jpg"
+                  alt="Basketball going through the hoop in an arena"
+                  width="900"
+                  height="600"
+                  loading="lazy"
+                />
+              </div>
+              <div class="event-card-body">
+                <span class="event-category">Sports</span>
+                <h3>Hardwood Rivalry</h3>
+                <p class="event-meta">Wed, Dec 9, 2026 · 7:00 PM<br />Toyota Center, Houston, TX</p>
+                <a class="text-link text-link-dark" href="events/hardwood-rivalry.html">View details <span>→</span></a>
+              </div>
+            </article>
+            <article class="event-card" data-event-category="theater">
+              <div class="event-card-media">
+                <img
+                  src="assets/images/events/holiday-ballet-hobby.jpg"
+                  alt="Ballet dancers performing on a lit stage"
+                  width="900"
+                  height="600"
+                  loading="lazy"
+                />
+              </div>
+              <div class="event-card-body">
+                <span class="event-category">Theater</span>
+                <h3>Holiday Ballet at the Hobby</h3>
+                <p class="event-meta">Sat, Dec 19, 2026 · 2:00 PM<br />Hobby Center, Houston, TX</p>
+                <a class="text-link text-link-dark" href="events/holiday-ballet-hobby.html">View details <span>→</span></a>
+              </div>
+            </article>
+            <article class="event-card" data-event-category="concerts">
+              <div class="event-card-media">
+                <img
+                  src="assets/images/events/new-years-eve-bayou.jpg"
+                  alt="Concert crowd under colorful stage lighting"
+                  width="900"
+                  height="600"
+                  loading="lazy"
+                />
+              </div>
+              <div class="event-card-body">
+                <span class="event-category">Concerts</span>
+                <h3>New Year’s Eve on the Bayou</h3>
+                <p class="event-meta">Thu, Dec 31, 2026 · 9:00 PM<br />White Oak Music Hall, Houston, TX</p>
+                <a class="text-link text-link-dark" href="events/new-years-eve-bayou.html">View details <span>→</span></a>
+              </div>
+            </article>
+            <article class="event-card" data-event-category="concerts">
+              <div class="event-card-media">
+                <img
+                  src="assets/images/events/moody-center-live.jpg"
+                  alt="Concert audience with hands raised toward the stage"
+                  width="900"
+                  height="600"
+                  loading="lazy"
+                />
+              </div>
+              <div class="event-card-body">
+                <span class="event-category">Concerts</span>
+                <h3>Moody Center Live</h3>
+                <p class="event-meta">Sat, Feb 6, 2027 · 8:00 PM<br />Moody Center, Austin, TX</p>
+                <a class="text-link text-link-dark" href="events/moody-center-live.html">View details <span>→</span></a>
+              </div>
+            </article>
+            <article class="event-card" data-event-category="theater">
+              <div class="event-card-media">
+                <img
+                  src="assets/images/events/winspear-opera-evening.jpg"
+                  alt="Symphony orchestra performing in a concert hall"
+                  width="900"
+                  height="600"
+                  loading="lazy"
+                />
+              </div>
+              <div class="event-card-body">
+                <span class="event-category">Theater</span>
+                <h3>Winspear Opera Evening</h3>
+                <p class="event-meta">Sat, Mar 13, 2027 · 7:30 PM<br />Winspear Opera House, Dallas, TX</p>
+                <a class="text-link text-link-dark" href="events/winspear-opera-evening.html">View details <span>→</span></a>
+              </div>
+            </article>
+            <article class="event-card" data-event-category="sports">
+              <div class="event-card-media">
+                <img
+                  src="assets/images/events/opening-day-ballpark.jpg"
+                  alt="Baseball stadium packed for a night game"
+                  width="900"
+                  height="600"
+                  loading="lazy"
+                />
+              </div>
+              <div class="event-card-body">
+                <span class="event-category">Sports</span>
+                <h3>Opening Day at the Ballpark</h3>
+                <p class="event-meta">Thu, Apr 1, 2027 · 6:10 PM<br />Minute Maid Park, Houston, TX</p>
+                <a class="text-link text-link-dark" href="events/opening-day-ballpark.html">View details <span>→</span></a>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section direct-sales-section">
+        <div class="container direct-sales-panel">
+          <div class="info-mark" aria-hidden="true">i</div>
+          <div>
+            <p class="eyebrow eyebrow-light">Looking for something else?</p>
+            <h2>Tell us the event you have in mind.</h2>
+            <p>If it is not listed here, send the name, date, city, and how many tickets you need. We will follow up — there is no online checkout on this website.</p>
+          </div>
+          <a class="button button-light" href="contact.html">Request tickets</a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" aria-label="Fort Bend Tickets home">
+            <img src="assets/images/fort-bend-tickets-logo.jpeg" alt="Fort Bend Tickets LLC" width="1024" height="1024" loading="lazy" />
+          </a>
+          <p>Live events. Unforgettable experiences.</p>
+        </div>
+        <div>
+          <h2 class="footer-heading">Explore</h2>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">Who We Are</a></li>
+            <li><a href="events.html">Events</a></li>
+            <li><a href="services.html">Our Services</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+          </ul>
+        </div>
+        <div>
+          <h2 class="footer-heading">Connect</h2>
+          <ul class="footer-links">
+            <li><a href="mailto:hello@fortbendtickets.com">hello@fortbendtickets.com</a></li>
+            <li><a href="tel:+18775546554">(877) 554-6554</a></li>
+            <li>130 Industrial Blvd Ste 110<br />Sugar Land, TX 77478-3276</li>
+          </ul>
+        </div>
+        <div>
+          <h2 class="footer-heading">Start a conversation</h2>
+          <p>Browse upcoming events or send a ticket request.</p>
+          <a class="text-link footer-contact-link" href="contact.html">Get in touch <span>→</span></a>
+        </div>
+      </div>
+      <div class="container footer-bottom">
+        <p>© <span data-current-year>2026</span> Fort Bend Tickets LLC. All rights reserved.</p>
+        <nav class="footer-legal" aria-label="Legal">
+          <a href="privacy.html">Privacy Policy</a>
+          <a href="terms.html">Terms &amp; Conditions</a>
+          <span>Inquiries only · No online checkout</span>
+        </nav>
+      </div>
+    </footer>
+  </body>
+</html>
