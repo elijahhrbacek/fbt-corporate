@@ -38,7 +38,7 @@ This may include your:
 - Name
 - Email address
 - Phone number
-- Billing or contact information
+- Contact information
 - Information provided when placing or discussing a ticket order
 - Information provided when contacting customer support
 
