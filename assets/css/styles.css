@@ -754,58 +754,6 @@ h3 {
   padding-bottom: 56px;
 }
 
-.event-hero-festival .page-hero-media {
-  background-image: url("../images/events/summer-sounds-festival.jpg");
-}
-
-.event-hero-sports .page-hero-media {
-  background-image: url("../images/events/friday-night-classic.jpg");
-}
-
-.event-hero-theater .page-hero-media {
-  background-image: url("../images/events/broadway-at-wortham.jpg");
-}
-
-.event-hero-country .page-hero-media {
-  background-image: url("../images/events/sugar-land-country-night.jpg");
-}
-
-.event-hero-arena .page-hero-media {
-  background-image: url("../images/events/downtown-arena-live.jpg");
-}
-
-.event-hero-football .page-hero-media {
-  background-image: url("../images/events/gulf-coast-classic.jpg");
-}
-
-.event-hero-play .page-hero-media {
-  background-image: url("../images/events/alley-theatre-premiere.jpg");
-}
-
-.event-hero-basketball .page-hero-media {
-  background-image: url("../images/events/hardwood-rivalry.jpg");
-}
-
-.event-hero-ballet .page-hero-media {
-  background-image: url("../images/events/holiday-ballet-hobby.jpg");
-}
-
-.event-hero-nye .page-hero-media {
-  background-image: url("../images/events/new-years-eve-bayou.jpg");
-}
-
-.event-hero-austin .page-hero-media {
-  background-image: url("../images/events/moody-center-live.jpg");
-}
-
-.event-hero-opera .page-hero-media {
-  background-image: url("../images/events/winspear-opera-evening.jpg");
-}
-
-.event-hero-baseball .page-hero-media {
-  background-image: url("../images/events/opening-day-ballpark.jpg");
-}
-
 .event-filters {
   display: flex;
   flex-wrap: wrap;
@@ -912,9 +860,69 @@ h3 {
   align-items: start;
 }
 
+.event-detail-copy {
+  display: grid;
+  gap: 36px;
+}
+
 .event-detail-copy .lead {
   color: var(--ink);
   font-size: 1.18rem;
+}
+
+.event-info-block h2 {
+  margin: 0 0 12px;
+  font-size: 1.35rem;
+}
+
+.event-info-block p {
+  color: var(--muted);
+}
+
+.event-info-block .lead {
+  margin-bottom: 12px;
+}
+
+.event-venue-line {
+  margin-bottom: 12px;
+  color: var(--navy-900) !important;
+  font-weight: 700;
+}
+
+.event-venue-line span {
+  font-weight: 600;
+  color: var(--muted);
+}
+
+.event-hotel-list {
+  display: grid;
+  gap: 12px;
+  margin: 16px 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.event-hotel-list li {
+  padding: 14px 0;
+  border-top: 1px solid var(--line);
+  color: var(--muted);
+  line-height: 1.45;
+}
+
+.event-hotel-list li:last-child {
+  padding-bottom: 0;
+  border-bottom: 1px solid var(--line);
+}
+
+.event-hotel-list strong {
+  color: var(--navy-900);
+  font-weight: 700;
+}
+
+.event-availability-note {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.95rem;
 }
 
 .event-request-panel {

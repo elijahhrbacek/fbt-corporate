@@ -25,7 +25,7 @@ Message frequency may vary depending on your transactions and interactions with 
 
 Message and data rates may apply.
 
-You may opt out of SMS communications at any time by replying STOP. For assistance, reply HELP or contact us at (877) 554-6554, 130 Industrial Blvd Ste 110, Sugar Land, TX 77478-3276.
+You may opt out of SMS communications at any time by replying STOP. For assistance, reply HELP or contact us at orders@fortbendtickets.com, (877) 554-6554, 130 Industrial Blvd Ste 110, Sugar Land, TX 77478-3276.
 
 ## I. Information We Collect
 

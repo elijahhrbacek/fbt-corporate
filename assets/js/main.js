@@ -161,7 +161,7 @@ async function submitContactForm(event) {
   if (endpoint.includes("YOUR_FORM_ID")) {
     updateFormStatus(
       form,
-      "Form delivery is awaiting final setup. Please email hello@fortbendtickets.com in the meantime.",
+      "Form delivery is awaiting final setup. Please email orders@fortbendtickets.com in the meantime.",
       "error",
     );
     return;
@@ -207,7 +207,7 @@ async function submitContactForm(event) {
   } catch {
     updateFormStatus(
       form,
-      "We couldn’t send your inquiry. Please try again or email hello@fortbendtickets.com.",
+      "We couldn’t send your inquiry. Please try again or email orders@fortbendtickets.com.",
       "error",
     );
   } finally {
@@ -218,73 +218,127 @@ async function submitContactForm(event) {
   }
 }
 
-const EVENT_INQUIRIES = {
-  "summer-sounds-festival": {
-    name: "Summer Sounds Festival",
-    date: "Saturday, September 12, 2026",
-    time: "4:00 PM",
-  },
-  "sugar-land-country-night": {
-    name: "Sugar Land Country Night",
-    date: "Friday, September 25, 2026",
-    time: "8:00 PM",
-  },
-  "friday-night-classic": {
-    name: "Friday Night Classic",
-    date: "Friday, October 3, 2026",
-    time: "7:00 PM",
-  },
-  "downtown-arena-live": {
-    name: "Downtown Arena Live",
-    date: "Saturday, October 17, 2026",
-    time: "7:30 PM",
-  },
-  "gulf-coast-classic": {
-    name: "Gulf Coast Classic",
-    date: "Sunday, October 25, 2026",
-    time: "12:00 PM",
-  },
-  "broadway-at-wortham": {
-    name: "Broadway at the Wortham",
-    date: "Saturday, November 8, 2026",
-    time: "8:00 PM",
-  },
-  "alley-theatre-premiere": {
-    name: "Alley Theatre Premiere",
-    date: "Thursday, November 12, 2026",
-    time: "7:30 PM",
-  },
-  "hardwood-rivalry": {
-    name: "Hardwood Rivalry",
-    date: "Wednesday, December 9, 2026",
-    time: "7:00 PM",
-  },
-  "holiday-ballet-hobby": {
-    name: "Holiday Ballet at the Hobby",
-    date: "Saturday, December 19, 2026",
-    time: "2:00 PM",
-  },
-  "new-years-eve-bayou": {
-    name: "New Year’s Eve on the Bayou",
-    date: "Thursday, December 31, 2026",
-    time: "9:00 PM",
-  },
-  "moody-center-live": {
-    name: "Moody Center Live",
-    date: "Saturday, February 6, 2027",
-    time: "8:00 PM",
-  },
-  "winspear-opera-evening": {
-    name: "Winspear Opera Evening",
-    date: "Saturday, March 13, 2027",
-    time: "7:30 PM",
-  },
-  "opening-day-ballpark": {
-    name: "Opening Day at the Ballpark",
-    date: "Thursday, April 1, 2027",
-    time: "6:10 PM",
-  },
+const FILTER_LABELS = {
+  basketball: "Basketball",
+  tennis: "Tennis",
+  motorsports: "Motorsports",
+  football: "Football",
+  sports: "Sports",
 };
+
+let eventsCatalog = [];
+let eventsBySlug = {};
+
+function getEventsDataUrl() {
+  return `${getAssetPrefix()}data/events.json`;
+}
+
+function getEventDetailHref(slug) {
+  const prefix = getAssetPrefix();
+  const base = prefix.includes("../") ? "event.html" : "events/event.html";
+  return `${base}?slug=${encodeURIComponent(slug)}`;
+}
+
+function formatEventMeta(event, { includeVenue = false, compact = false } = {}) {
+  const datePart = compact ? compactEventDate(event.dateDisplay) : event.dateDisplay;
+  const timePart = event.timeDisplay ? ` · ${event.timeDisplay}` : "";
+  if (!includeVenue) return `${datePart}${timePart}`;
+  return `${datePart}${timePart}<br />${escapeHtml(event.venue)}`;
+}
+
+function compactEventDate(dateDisplay) {
+  if (!dateDisplay) return "";
+  return dateDisplay
+    .replace(/\bMonday\b/g, "Mon")
+    .replace(/\bTuesday\b/g, "Tue")
+    .replace(/\bWednesday\b/g, "Wed")
+    .replace(/\bThursday\b/g, "Thu")
+    .replace(/\bFriday\b/g, "Fri")
+    .replace(/\bSaturday\b/g, "Sat")
+    .replace(/\bSunday\b/g, "Sun")
+    .replace(/\bJanuary\b/g, "Jan")
+    .replace(/\bFebruary\b/g, "Feb")
+    .replace(/\bMarch\b/g, "Mar")
+    .replace(/\bApril\b/g, "Apr")
+    .replace(/\bAugust\b/g, "Aug")
+    .replace(/\bSeptember\b/g, "Sep")
+    .replace(/\bOctober\b/g, "Oct")
+    .replace(/\bNovember\b/g, "Nov")
+    .replace(/\bDecember\b/g, "Dec");
+}
+
+function escapeHtml(value) {
+  return String(value)
+    .replaceAll("&", "&amp;")
+    .replaceAll("<", "&lt;")
+    .replaceAll(">", "&gt;")
+    .replaceAll('"', "&quot;")
+    .replaceAll("'", "&#39;");
+}
+
+function sortEvents(events) {
+  return [...events].sort((a, b) => {
+    if (Boolean(b.featured) !== Boolean(a.featured)) return Number(b.featured) - Number(a.featured);
+    return String(a.sortDate || "").localeCompare(String(b.sortDate || ""));
+  });
+}
+
+function buildEventCard(event, { compact = false } = {}) {
+  const filterLabel = FILTER_LABELS[event.filter] || FILTER_LABELS[event.category] || "Sports";
+  const meta = compact
+    ? `${escapeHtml(compactEventDate(event.dateDisplay))} · ${escapeHtml(shortVenue(event.venue))}`
+    : formatEventMeta(event, { includeVenue: true, compact: true });
+
+  const article = document.createElement("article");
+  article.className = "event-card";
+  article.setAttribute("data-event-category", event.filter || event.category || "sports");
+  article.innerHTML = `
+    <div class="event-card-media">
+      <img
+        src="${escapeHtml(event.image)}"
+        alt="${escapeHtml(event.imageAlt || event.name)}"
+        width="900"
+        height="600"
+        loading="lazy"
+      />
+    </div>
+    <div class="event-card-body">
+      <span class="event-category">${escapeHtml(filterLabel)}</span>
+      <h3>${escapeHtml(event.name)}</h3>
+      <p class="event-meta">${meta}</p>
+      <a class="text-link text-link-dark" href="${getEventDetailHref(event.slug)}">View details <span>→</span></a>
+    </div>
+  `;
+  return article;
+}
+
+function shortVenue(venue) {
+  if (!venue) return "";
+  const parts = venue.split(",");
+  if (parts.length >= 2) return parts.slice(-2).join(",").trim();
+  return venue;
+}
+
+async function loadEvents() {
+  if (eventsCatalog.length) return eventsCatalog;
+
+  const response = await fetch(getEventsDataUrl());
+  if (!response.ok) throw new Error("Unable to load events");
+
+  const payload = await response.json();
+  eventsCatalog = Array.isArray(payload.events) ? payload.events : [];
+  eventsBySlug = Object.fromEntries(eventsCatalog.map((event) => [event.slug, event]));
+  return eventsCatalog;
+}
+
+function inquiryFromEvent(event) {
+  if (!event) return null;
+  return {
+    name: event.name,
+    date: event.dateDisplay || "",
+    time: event.timeDisplay || "",
+  };
+}
 
 function applyEventInquiryContext() {
   const contactForm = document.querySelector("[data-contact-form]:not([data-ticket-request-form])");
@@ -292,7 +346,7 @@ function applyEventInquiryContext() {
 
   const params = new URLSearchParams(window.location.search);
   const slug = params.get("event") || "";
-  const catalog = EVENT_INQUIRIES[slug];
+  const catalog = inquiryFromEvent(eventsBySlug[slug]);
   const eventName = params.get("eventName") || catalog?.name || "";
   const eventDate = params.get("eventDate") || catalog?.date || "";
   const eventTime = params.get("eventTime") || catalog?.time || "";
@@ -355,7 +409,10 @@ function fillTicketRequestForm(form, event) {
 
   if (nameField instanceof HTMLInputElement) nameField.value = event.name || "";
   if (dateField instanceof HTMLInputElement) dateField.value = event.date || "";
-  if (timeField instanceof HTMLInputElement) timeField.value = event.time || "";
+  if (timeField instanceof HTMLInputElement) {
+    timeField.value = event.time || "";
+    timeField.closest(".form-field")?.toggleAttribute("hidden", !event.time);
+  }
   if (slugField instanceof HTMLInputElement) slugField.value = event.slug || "";
 
   if (subjectLine instanceof HTMLInputElement) {
@@ -526,20 +583,131 @@ function initTicketRequestModal() {
   dialog?.addEventListener("click", (event) => event.stopPropagation());
 }
 
-const pageContactForm = document.querySelector("[data-contact-form]:not([data-ticket-request-form])");
+function renderEventListing(events) {
+  const grid = document.querySelector("[data-event-grid]");
+  if (!grid) return;
 
-if (pageContactForm instanceof HTMLFormElement) {
-  const submitButton = pageContactForm.querySelector("[data-submit-button]");
-  if (submitButton instanceof HTMLButtonElement && !submitButton.getAttribute("data-default-label")) {
-    submitButton.setAttribute("data-default-label", "Send inquiry →");
-  }
-
-  applyEventInquiryContext();
-  bindFormValidation(pageContactForm);
-  pageContactForm.addEventListener("submit", submitContactForm);
+  grid.replaceChildren();
+  sortEvents(events).forEach((event) => {
+    grid.appendChild(buildEventCard(event));
+  });
 }
 
-initTicketRequestModal();
+function renderHomeEvents(events) {
+  const grid = document.querySelector("[data-home-event-grid]");
+  if (!grid) return;
+
+  const homeEvents = sortEvents(events).slice(0, 6);
+  grid.replaceChildren();
+  homeEvents.forEach((event) => {
+    grid.appendChild(buildEventCard(event, { compact: true }));
+  });
+}
+
+function setText(selector, value) {
+  const element = document.querySelector(selector);
+  if (element) element.textContent = value;
+}
+
+function showEventNotFound() {
+  const found = document.querySelector("[data-event-found]");
+  const missing = document.querySelector("[data-event-missing]");
+  if (found instanceof HTMLElement) found.hidden = true;
+  if (missing instanceof HTMLElement) missing.hidden = false;
+  document.title = "Event not found | Fort Bend Tickets";
+}
+
+function hydrateEventDetail(event) {
+  const found = document.querySelector("[data-event-found]");
+  const missing = document.querySelector("[data-event-missing]");
+  if (!(found instanceof HTMLElement)) return;
+
+  if (missing instanceof HTMLElement) missing.hidden = true;
+  found.hidden = false;
+
+  const filterLabel = FILTER_LABELS[event.filter] || FILTER_LABELS[event.category] || "Sports";
+  const dateTime = event.timeDisplay
+    ? `${event.dateDisplay} · ${event.timeDisplay}`
+    : event.dateDisplay;
+  const heroLine = `${event.dateDisplay} · ${event.venue}`;
+  const pageTitle = `${event.name} | Fort Bend Tickets`;
+  const description = `Request tickets to ${event.name} at ${event.venue}. Fort Bend Tickets follows up — no online checkout.`;
+  const canonical = `https://fortbendtickets.com/events/event.html?slug=${encodeURIComponent(event.slug)}`;
+
+  document.title = pageTitle;
+  document.querySelector('meta[name="description"]')?.setAttribute("content", description);
+  document.querySelector('meta[property="og:title"]')?.setAttribute("content", pageTitle);
+  document.querySelector('meta[property="og:description"]')?.setAttribute("content", event.summary || description);
+  document.querySelector('meta[property="og:url"]')?.setAttribute("content", canonical);
+  document.querySelector('link[rel="canonical"]')?.setAttribute("href", canonical);
+
+  const heroMedia = document.querySelector("[data-event-hero-media]");
+  if (heroMedia instanceof HTMLElement) {
+    heroMedia.style.backgroundImage = `url("${event.image}")`;
+    heroMedia.setAttribute("aria-label", event.imageAlt || event.name);
+  }
+
+  setText("[data-event-category-label]", filterLabel);
+  setText("[data-event-name]", event.name);
+  setText("[data-event-hero-meta]", heroLine);
+  setText("[data-event-summary]", event.summary || "");
+  setText("[data-event-about]", event.about || event.description || "");
+  setText("[data-event-venue-name]", event.venue);
+  setText("[data-event-venue]", event.venue);
+  setText("[data-event-venue-description]", event.venueDescription || "");
+  setText("[data-event-accommodations-intro]", event.accommodationsIntro || "");
+  setText("[data-event-datetime]", dateTime);
+  setText("[data-event-category-fact]", filterLabel);
+
+  const countryLine = document.querySelector("[data-event-country-line]");
+  if (countryLine) {
+    countryLine.textContent = event.country ? ` · ${event.country}` : "";
+  }
+
+  const hotelList = document.querySelector("[data-event-accommodations]");
+  if (hotelList instanceof HTMLElement) {
+    hotelList.replaceChildren();
+    const hotels = Array.isArray(event.accommodations) ? event.accommodations : [];
+    if (!hotels.length) {
+      const empty = document.createElement("li");
+      empty.textContent = "Ask our team for lodging suggestions near the venue when you request tickets.";
+      hotelList.appendChild(empty);
+    } else {
+      hotels.forEach((hotel) => {
+        const item = document.createElement("li");
+        const name = document.createElement("strong");
+        name.textContent = hotel.name || "Nearby hotel";
+        item.appendChild(name);
+        if (hotel.detail) {
+          item.appendChild(document.createTextNode(` — ${hotel.detail}`));
+        }
+        hotelList.appendChild(item);
+      });
+    }
+  }
+
+  const requestButton = document.querySelector("[data-ticket-request]");
+  if (requestButton instanceof HTMLElement) {
+    requestButton.setAttribute("data-event-slug", event.slug);
+    requestButton.setAttribute("data-event-name", event.name);
+    requestButton.setAttribute("data-event-date", event.dateDisplay || "");
+    requestButton.setAttribute("data-event-time", event.timeDisplay || "");
+  }
+}
+
+function initEventDetailPage() {
+  const detailRoot = document.querySelector("[data-event-detail]");
+  if (!detailRoot) return;
+
+  const slug = new URLSearchParams(window.location.search).get("slug") || "";
+  const event = eventsBySlug[slug];
+  if (!event) {
+    showEventNotFound();
+    return;
+  }
+
+  hydrateEventDetail(event);
+}
 
 function initEventFilters() {
   const grid = document.querySelector("[data-event-grid]");
@@ -564,4 +732,41 @@ function initEventFilters() {
   });
 }
 
-initEventFilters();
+function initContactForm() {
+  const pageContactForm = document.querySelector("[data-contact-form]:not([data-ticket-request-form])");
+  if (!(pageContactForm instanceof HTMLFormElement)) return;
+
+  const submitButton = pageContactForm.querySelector("[data-submit-button]");
+  if (submitButton instanceof HTMLButtonElement && !submitButton.getAttribute("data-default-label")) {
+    submitButton.setAttribute("data-default-label", "Send inquiry →");
+  }
+
+  applyEventInquiryContext();
+  bindFormValidation(pageContactForm);
+  pageContactForm.addEventListener("submit", submitContactForm);
+}
+
+async function bootstrapEventsUi() {
+  try {
+    const events = await loadEvents();
+    renderHomeEvents(events);
+    renderEventListing(events);
+    initEventDetailPage();
+    initContactForm();
+  } catch (error) {
+    console.error(error);
+    const grids = document.querySelectorAll("[data-event-grid], [data-home-event-grid]");
+    grids.forEach((grid) => {
+      if (!(grid instanceof HTMLElement)) return;
+      grid.innerHTML =
+        '<p class="event-load-error">Events could not be loaded. Please refresh the page or contact us directly.</p>';
+    });
+    if (document.querySelector("[data-event-detail]")) showEventNotFound();
+    initContactForm();
+  }
+
+  initEventFilters();
+  initTicketRequestModal();
+}
+
+bootstrapEventsUi();

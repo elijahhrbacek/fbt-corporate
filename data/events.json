@@ -1,0 +1,354 @@
+{
+  "events": [
+    {
+      "slug": "philadelphia-76ers-home-games",
+      "name": "All Home Games — Philadelphia 76ers",
+      "category": "sports",
+      "filter": "basketball",
+      "dateDisplay": "2026–27 season",
+      "timeDisplay": null,
+      "sortDate": "2026-10-01",
+      "venue": "Xfinity Mobile Arena, Philadelphia, PA",
+      "country": "United States",
+      "summary": "Full-season home package for every Philadelphia 76ers game at Xfinity Mobile Arena.",
+      "description": "Request help securing seats for the 76ers’ full 2026–27 home schedule in Philadelphia. Share how many tickets you need and any seating preferences, and our brokerage team will follow up with available options.",
+      "about": "Follow every Philadelphia 76ers home tip-off of the 2026–27 season with a full-season seat package at Xfinity Mobile Arena. Whether you want lower-bowl energy or club-level comfort, tell us your quantity and seating priorities and Fort Bend Tickets will research options across the home schedule.",
+      "venueDescription": "Xfinity Mobile Arena sits in Center City Philadelphia and hosts NBA basketball, concerts, and major arena events. The building is steps from Broad Street transit, nearby hotels, and downtown dining — making full-season attendance practical for fans traveling into the city.",
+      "accommodationsIntro": "Center City puts you within a short walk or ride of tip-off. These stays are common bases for arena nights:",
+      "accommodations": [
+        {
+          "name": "The Notary Hotel, Autograph Collection",
+          "detail": "Downtown Philadelphia, a short walk from the arena district"
+        },
+        {
+          "name": "Loews Philadelphia Hotel",
+          "detail": "Market Street location near Broad Street Line access"
+        },
+        {
+          "name": "Kimpton Hotel Monaco Philadelphia",
+          "detail": "Boutique stay near City Hall and Center City dining"
+        }
+      ],
+      "image": "https://img.lightshot.app/kGE-aZ92TWCfUL-f_t5X4w.png",
+      "imageAlt": "Philadelphia 76ers 2026–27 season all home games graphic with players and Xfinity Mobile Arena",
+      "imageSearchQuery": "Philadelphia 76ers 2026-27 all home games Xfinity Mobile Arena",
+      "ticketUrl": "https://www.nba.com/sixers/tickets/society76",
+      "featured": true
+    },
+    {
+      "slug": "us-open-womens-singles-semifinals",
+      "name": "Women's Singles Semifinals (US Open)",
+      "category": "sports",
+      "filter": "tennis",
+      "dateDisplay": "Thursday, September 10, 2026",
+      "timeDisplay": "7:00 PM",
+      "sortDate": "2026-09-10",
+      "venue": "Arthur Ashe Stadium, Flushing, NY",
+      "country": "United States",
+      "summary": "Night-session women’s singles semifinals at Arthur Ashe Stadium during the US Open.",
+      "description": "Catch the women’s singles semifinals under the lights at Arthur Ashe Stadium in Flushing. Tell us quantity and seating preferences, and we’ll follow up with availability and pricing — there is no online checkout.",
+      "about": "The night session on Arthur Ashe Stadium delivers two women’s singles semifinals under the lights — one of the most charged evenings of the US Open fortnight. Share how many seats you need and preferred sections, and our team will follow up with availability and pricing.",
+      "venueDescription": "Arthur Ashe Stadium is the centerpiece of the USTA Billie Jean King National Tennis Center in Flushing Meadows–Corona Park, Queens, New York. The retractable-roof arena hosts the US Open’s marquee night sessions and sits near the Mets–Willets Point subway station for easy access from Manhattan and Queens.",
+      "accommodationsIntro": "Flushing and LaGuardia-area hotels keep you close to the grounds for late night sessions:",
+      "accommodations": [
+        {
+          "name": "Hotel Indigo Flushing",
+          "detail": "About 1 mile from Arthur Ashe Stadium in downtown Flushing"
+        },
+        {
+          "name": "Sheraton LaGuardia East Hotel",
+          "detail": "Flushing location with quick access to the tennis center"
+        },
+        {
+          "name": "Hyatt Place Flushing/LaGuardia Airport",
+          "detail": "Under a mile from the stadium; convenient for fly-in visitors"
+        }
+      ],
+      "image": "https://img.lightshot.app/zMn3MdQkRdqIMjV59zmtSg.png",
+      "imageAlt": "US Open women’s singles semifinals cover art at Arthur Ashe Stadium, Flushing, NY",
+      "imageSearchQuery": "US Open women's singles semifinals Arthur Ashe Stadium cover art",
+      "ticketUrl": "https://www.ticketmaster.com/womens-singles-semifinals-flushing-new-york-09-10-2026/event/1D00646DB471672F",
+      "featured": true
+    },
+    {
+      "slug": "us-open-womens-doubles-mens-singles-semifinal",
+      "name": "Women's Doubles Final / Men's Singles Semifinal (US Open)",
+      "category": "sports",
+      "filter": "tennis",
+      "dateDisplay": "Friday, September 11, 2026",
+      "timeDisplay": "12:00 PM",
+      "sortDate": "2026-09-11",
+      "venue": "Arthur Ashe Stadium, Flushing, NY",
+      "country": "United States",
+      "summary": "Day session featuring the women’s doubles final and a men’s singles semifinal at the US Open.",
+      "description": "Request tickets for the Friday day session at Arthur Ashe Stadium, featuring the women’s doubles final and a men’s singles semifinal. Share seating preferences and ticket quantity, and our team will follow up.",
+      "about": "Friday’s day session pairs the women’s doubles final with a men’s singles semifinal on Arthur Ashe Stadium — a full afternoon of championship tennis as the US Open turns toward the final weekend. Tell us your preferred seating and ticket quantity, and we’ll research available options.",
+      "venueDescription": "Arthur Ashe Stadium is the centerpiece of the USTA Billie Jean King National Tennis Center in Flushing Meadows–Corona Park, Queens, New York. Day sessions fill the largest tennis stadium in the world, with subway access via Mets–Willets Point and nearby Flushing dining between matches.",
+      "accommodationsIntro": "Stay near Flushing Meadows so you can arrive early for day-session gates:",
+      "accommodations": [
+        {
+          "name": "Hotel Indigo Flushing",
+          "detail": "About 1 mile from Arthur Ashe Stadium in downtown Flushing"
+        },
+        {
+          "name": "Ramada by Wyndham Flushing Queens",
+          "detail": "Under a mile from the stadium; near the 7 train"
+        },
+        {
+          "name": "Marco LaGuardia Hotel & Suites",
+          "detail": "Flushing stay popular with US Open travelers"
+        }
+      ],
+      "image": "https://img.lightshot.app/fb0FUky_RVOLZUPXpyAdug.png",
+      "imageAlt": "US Open mixed session cover art with women’s doubles and men’s singles players at Arthur Ashe Stadium",
+      "imageSearchQuery": "US Open women's doubles final men's singles semifinal Arthur Ashe Stadium cover art",
+      "ticketUrl": "https://www.ticketmaster.com/womens-doubles-finalmens-singles-semifinal-flushing-new-york-09-11-2026/event/1D00646DB3376624",
+      "featured": true
+    },
+    {
+      "slug": "us-open-mens-singles-semifinal",
+      "name": "Men's Singles Semifinal (US Open)",
+      "category": "sports",
+      "filter": "tennis",
+      "dateDisplay": "Friday, September 11, 2026",
+      "timeDisplay": "7:00 PM",
+      "sortDate": "2026-09-11",
+      "venue": "Arthur Ashe Stadium, Flushing, NY",
+      "country": "United States",
+      "summary": "Night-session men’s singles semifinal at Arthur Ashe Stadium during the US Open.",
+      "description": "Secure seats for the Friday night men’s singles semifinal at Arthur Ashe Stadium. Tell us how many tickets you need and any viewing preferences — we’ll confirm availability and next steps.",
+      "about": "Friday night on Ashe belongs to the men’s singles semifinal — a high-stakes night session that sets up championship Sunday. Share how many tickets you need and any viewing preferences, and Fort Bend Tickets will confirm availability and next steps.",
+      "venueDescription": "Arthur Ashe Stadium anchors the USTA Billie Jean King National Tennis Center in Flushing Meadows–Corona Park, Queens, New York. Night sessions are among the most sought-after US Open tickets, with the stadium’s retractable roof ready for New York weather.",
+      "accommodationsIntro": "Queens hotels near Flushing keep the late finish manageable:",
+      "accommodations": [
+        {
+          "name": "Sheraton LaGuardia East Hotel",
+          "detail": "Flushing location with quick access to the tennis center"
+        },
+        {
+          "name": "Hyatt Place Flushing/LaGuardia Airport",
+          "detail": "Under a mile from Arthur Ashe Stadium"
+        },
+        {
+          "name": "Hotel Indigo Flushing",
+          "detail": "Downtown Flushing base for tournament evenings"
+        }
+      ],
+      "image": "https://img.lightshot.app/VGAPDKqDS9K79H-hAA7s3w.png",
+      "imageAlt": "US Open men’s singles promotional cover art with player celebrating at Arthur Ashe Stadium",
+      "imageSearchQuery": "US Open men's singles semifinal Novak Djokovic Arthur Ashe Stadium cover art",
+      "ticketUrl": "https://www.ticketmaster.com/mens-singles-semifinal-flushing-new-york-09-11-2026/event/1D00646DB49A6754",
+      "featured": true
+    },
+    {
+      "slug": "us-open-mens-doubles-womens-singles-final",
+      "name": "Men's Doubles Final / Women's Singles Final (US Open)",
+      "category": "sports",
+      "filter": "tennis",
+      "dateDisplay": "Saturday, September 12, 2026",
+      "timeDisplay": "12:00 PM",
+      "sortDate": "2026-09-12",
+      "venue": "Arthur Ashe Stadium, Flushing, NY",
+      "country": "United States",
+      "summary": "Saturday session with the men’s doubles final and women’s singles championship at the US Open.",
+      "description": "Request tickets for the Saturday US Open session at Arthur Ashe Stadium, featuring the men’s doubles final and the women’s singles final. Our team follows up with options — no online checkout.",
+      "about": "Saturday’s Arthur Ashe session crowns the women’s singles champion and stages the men’s doubles final — one of the tournament’s signature championship days. Request seats with your preferred quantity and section range, and our team will follow up with options.",
+      "venueDescription": "Arthur Ashe Stadium is the flagship court of the USTA Billie Jean King National Tennis Center in Flushing Meadows–Corona Park, Queens, New York. Championship Saturday packs the world’s largest tennis arena with finalists, ceremonies, and full stadium energy.",
+      "accommodationsIntro": "Book near Flushing Meadows for an easy championship-Saturday morning:",
+      "accommodations": [
+        {
+          "name": "Hotel Indigo Flushing",
+          "detail": "About 1 mile from Arthur Ashe Stadium"
+        },
+        {
+          "name": "Ramada by Wyndham Flushing Queens",
+          "detail": "Close to the stadium and Flushing transit"
+        },
+        {
+          "name": "SpringHill Suites by Marriott New York LaGuardia Airport",
+          "detail": "Suite-style stay near the tennis center corridor"
+        }
+      ],
+      "image": "https://img.lightshot.app/fb0FUky_RVOLZUPXpyAdug.png",
+      "imageAlt": "US Open mixed session cover art with women’s doubles and men’s singles players at Arthur Ashe Stadium",
+      "imageSearchQuery": "US Open men's doubles final women's singles final Arthur Ashe Stadium cover art",
+      "ticketUrl": "https://www.ticketmaster.com/mens-doubles-finalwomens-singles-final-flushing-new-york-09-12-2026/event/1D00646DB3376626",
+      "featured": true
+    },
+    {
+      "slug": "us-open-mens-singles-final",
+      "name": "Men's Singles Final (US Open)",
+      "category": "sports",
+      "filter": "tennis",
+      "dateDisplay": "Sunday, September 13, 2026",
+      "timeDisplay": "2:00 PM",
+      "sortDate": "2026-09-13",
+      "venue": "Arthur Ashe Stadium, Flushing, NY",
+      "country": "United States",
+      "summary": "The men’s singles championship match at Arthur Ashe Stadium to close the US Open.",
+      "description": "Request seats for the US Open men’s singles final at Arthur Ashe Stadium. Share quantity and seating preferences, and Fort Bend Tickets will follow up with availability and pricing.",
+      "about": "The US Open closes with the men’s singles final on Arthur Ashe Stadium — the last major championship of the tennis season. Share quantity and seating preferences, and Fort Bend Tickets will follow up with availability and pricing for championship Sunday.",
+      "venueDescription": "Arthur Ashe Stadium, inside the USTA Billie Jean King National Tennis Center in Flushing Meadows–Corona Park, Queens, New York, hosts the men’s singles final before a capacity crowd. The stadium’s scale and New York backdrop make it one of sport’s most recognizable championship stages.",
+      "accommodationsIntro": "Championship Sunday travel is easiest from Flushing or LaGuardia-adjacent hotels:",
+      "accommodations": [
+        {
+          "name": "Sheraton LaGuardia East Hotel",
+          "detail": "Flushing location near the National Tennis Center"
+        },
+        {
+          "name": "Hotel Indigo Flushing",
+          "detail": "Downtown Flushing stay about a mile from Ashe"
+        },
+        {
+          "name": "Hyatt Place Flushing/LaGuardia Airport",
+          "detail": "Convenient for airport arrivals and stadium access"
+        }
+      ],
+      "image": "https://img.lightshot.app/VGAPDKqDS9K79H-hAA7s3w.png",
+      "imageAlt": "US Open men’s singles promotional cover art with player celebrating at Arthur Ashe Stadium",
+      "imageSearchQuery": "US Open men's singles final Novak Djokovic Arthur Ashe Stadium cover art",
+      "ticketUrl": "https://www.ticketmaster.com/mens-singles-final-flushing-new-york-09-13-2026/event/1D00646DB3386628",
+      "featured": true
+    },
+    {
+      "slug": "f1-united-states-grand-prix-2026",
+      "name": "Formula 1 MSC Cruises United States Grand Prix 2026",
+      "category": "sports",
+      "filter": "motorsports",
+      "dateDisplay": "October 24 – October 26, 2026",
+      "timeDisplay": null,
+      "sortDate": "2026-10-24",
+      "venue": "Circuit of the Americas (COTA), Austin, Texas, USA",
+      "country": "United States",
+      "summary": "Three-day Formula 1 race weekend at Circuit of the Americas in Austin.",
+      "description": "Request tickets for the 2026 Formula 1 United States Grand Prix weekend at COTA. Tell us which days you want, how many seats you need, and any grandstand or hospitality preferences — we’ll follow up directly.",
+      "about": "Spend race weekend at Circuit of the Americas for the Formula 1 MSC Cruises United States Grand Prix — practice, qualifying, and race day across three October days in Austin. Tell us which days you want, how many seats you need, and any grandstand or hospitality preferences, and we’ll follow up directly.",
+      "venueDescription": "Circuit of the Americas (COTA) is a purpose-built F1 venue southeast of downtown Austin in Travis County, Texas. The 3.4-mile circuit, Observation Tower, and amphitheater grounds host the United States Grand Prix with shuttle and rideshare corridors linking downtown, South Congress, and East Austin hotel zones.",
+      "accommodationsIntro": "Most race fans base in downtown or South Austin and transfer to COTA on race days:",
+      "accommodations": [
+        {
+          "name": "Fairmont Austin",
+          "detail": "Downtown Austin flagship near the Convention Center"
+        },
+        {
+          "name": "JW Marriott Austin",
+          "detail": "Congress Avenue location with easy downtown access"
+        },
+        {
+          "name": "Hotel Granduca Austin",
+          "detail": "Southwest Austin stay closer to the COTA corridor"
+        }
+      ],
+      "image": "https://img.lightshot.app/75WPrrhSS3uprdADjvZ63A.png",
+      "imageAlt": "Formula 1 MSC Cruises United States Grand Prix 2026 cover art at Circuit of the Americas in Austin",
+      "imageSearchQuery": "Formula 1 United States Grand Prix 2026 Circuit of the Americas Austin cover art",
+      "ticketUrl": "https://tickets.formula1.com/en/f1-3320-united-states",
+      "featured": true
+    },
+    {
+      "slug": "super-bowl-lxi",
+      "name": "Super Bowl LXI",
+      "category": "sports",
+      "filter": "football",
+      "dateDisplay": "February 14, 2027",
+      "timeDisplay": null,
+      "sortDate": "2027-02-14",
+      "venue": "SoFi Stadium, Los Angeles (Inglewood), California",
+      "country": "United States",
+      "summary": "Super Bowl LXI at SoFi Stadium in Inglewood, California.",
+      "description": "Request tickets for Super Bowl LXI at SoFi Stadium. Share quantity and seating preferences, and our brokerage team will follow up with available options — there is no online checkout on this website.",
+      "about": "Super Bowl LXI brings the NFL’s championship game to SoFi Stadium in Inglewood. Share quantity and seating preferences — lower bowl, club, or suite-adjacent — and our brokerage team will follow up with available options. There is no online checkout on this website.",
+      "venueDescription": "SoFi Stadium anchors Hollywood Park in Inglewood, California, just south of Los Angeles International Airport. The open-air indoor stadium hosts the Rams, Chargers, and major championship events, with LAX, the Forum, and nearby Inglewood hotel corridors supporting game-day travel.",
+      "accommodationsIntro": "Inglewood and LAX-area hotels keep Super Bowl weekend logistics simpler:",
+      "accommodations": [
+        {
+          "name": "Hilton Los Angeles Airport",
+          "detail": "LAX corridor stay with stadium-area transfers"
+        },
+        {
+          "name": "Four Points by Sheraton Los Angeles International Airport",
+          "detail": "Practical base between LAX and Inglewood"
+        },
+        {
+          "name": "Residence Inn Los Angeles LAX/Century Boulevard",
+          "detail": "Suite-style lodging near the SoFi Stadium corridor"
+        }
+      ],
+      "image": "https://img.lightshot.app/QyGNBLomQ7KVwZnJZheEkA.png",
+      "imageAlt": "Super Bowl LXI promotional cover art at SoFi Stadium in Los Angeles",
+      "imageSearchQuery": "Super Bowl LXI SoFi Stadium Los Angeles cover art",
+      "ticketUrl": "https://onlocationexp.com/nfl/super-bowl-tickets",
+      "featured": true
+    },
+    {
+      "slug": "nba-all-star-2027",
+      "name": "2027 NBA All-Star",
+      "category": "sports",
+      "filter": "basketball",
+      "dateDisplay": "February 19–21, 2027",
+      "timeDisplay": null,
+      "sortDate": "2027-02-19",
+      "venue": "Mortgage Matchup Center (formerly Footprint Center), Phoenix, Arizona",
+      "country": "United States",
+      "summary": "NBA All-Star weekend in Phoenix at Mortgage Matchup Center.",
+      "description": "Request tickets for 2027 NBA All-Star weekend in Phoenix. Let us know which events you want and how many seats you need — we’ll review availability and contact you with next steps.",
+      "about": "NBA All-Star weekend returns to Phoenix with Rising Stars, skills competitions, and All-Star Game night at Mortgage Matchup Center. Let us know which events you want and how many seats you need — we’ll review availability and contact you with next steps.",
+      "venueDescription": "Mortgage Matchup Center (formerly Footprint Center) is the downtown Phoenix home of the Suns and Mercury, set in the Copper Square entertainment district. Light rail, restaurants, and hotels surround the arena, making All-Star weekend easy to navigate on foot from downtown stays.",
+      "accommodationsIntro": "Downtown Phoenix hotels put you walking distance from All-Star venues:",
+      "accommodations": [
+        {
+          "name": "Renaissance Phoenix Downtown Hotel",
+          "detail": "Connected to the downtown arena corridor"
+        },
+        {
+          "name": "Sheraton Phoenix Downtown",
+          "detail": "Large downtown base near Copper Square"
+        },
+        {
+          "name": "Hotel Palomar Phoenix — a Kimpton Hotel",
+          "detail": "Boutique downtown stay near restaurants and light rail"
+        }
+      ],
+      "image": "https://cdn.nba.com/teams/uploads/sites/1610612756/2026/02/NBA-All-Star-2027-graphic-16x9-1.jpg?im=Resize=(1600)",
+      "imageAlt": "NBA All-Star 2027 promotional graphic for Phoenix, February 19–21, with Mortgage Matchup Center",
+      "imageSearchQuery": "NBA All-Star 2027 Phoenix Mortgage Matchup Center graphic",
+      "ticketUrl": "https://nbaexperiences.com/nba-all-star-2027",
+      "featured": true
+    },
+    {
+      "slug": "daytona-500-2027",
+      "name": "Daytona 500",
+      "category": "sports",
+      "filter": "motorsports",
+      "dateDisplay": "February 1, 2027",
+      "timeDisplay": null,
+      "sortDate": "2027-02-01",
+      "venue": "Daytona International Speedway, Daytona Beach, Florida",
+      "country": "United States",
+      "summary": "NASCAR’s Daytona 500 at Daytona International Speedway.",
+      "description": "Request tickets for the Daytona 500 at Daytona International Speedway. Share quantity and seating preferences, and Fort Bend Tickets will follow up with availability and pricing.",
+      "about": "The Daytona 500 opens the NASCAR Cup Series season on the high banks of Daytona International Speedway. Share quantity and seating preferences — grandstand, infield, or hospitality — and Fort Bend Tickets will follow up with availability and pricing.",
+      "venueDescription": "Daytona International Speedway sits in Daytona Beach, Florida, a short drive from the Atlantic shoreline and International Speedway Boulevard hotels. The 2.5-mile tri-oval hosts Speedweeks and the Great American Race, with fans typically staying oceanfront or near the track gates.",
+      "accommodationsIntro": "Beachfront and track-adjacent hotels fill quickly for Speedweeks:",
+      "accommodations": [
+        {
+          "name": "Hilton Daytona Beach Oceanfront Resort",
+          "detail": "Oceanfront stay with easy drive to the speedway"
+        },
+        {
+          "name": "The Daytona",
+          "detail": "Beachfront hotel popular for race weekend"
+        },
+        {
+          "name": "Hard Rock Hotel Daytona Beach",
+          "detail": "Oceanfront base a short ride from Daytona International Speedway"
+        }
+      ],
+      "image": "https://cdn-az.allevents.in/events6/banners/7adc8ee0-9452-11f1-b9f1-838473689728-rimg-w1200-h800-dcf8f8f8-gmir.jpg?v=1786321739",
+      "imageAlt": "Daytona 500 2027 promotional graphic with tickets on sale now",
+      "imageSearchQuery": "Daytona 500 2027 tickets on sale promotional graphic",
+      "ticketUrl": "https://www.daytonainternationalspeedway.com/events/daytona-500/",
+      "featured": true
+    }
+  ]
+}

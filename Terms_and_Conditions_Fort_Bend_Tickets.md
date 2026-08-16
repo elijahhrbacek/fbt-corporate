@@ -159,6 +159,7 @@ After opting out, you will no longer receive SMS communications from this progra
 
 For assistance with SMS communications, reply HELP to any SMS message from Fort Bend Tickets LLC or contact us at:
 
+**Email:** orders@fortbendtickets.com  
 **Phone:** (877) 554-6554  
 130 Industrial Blvd Ste 110  
 Sugar Land, TX 77478-3276
@@ -211,4 +212,5 @@ If you have questions regarding these Terms and Conditions or our SMS communicat
 **Fort Bend Tickets LLC**  
 130 Industrial Blvd Ste 110  
 Sugar Land, TX 77478-3276  
+**Email:** orders@fortbendtickets.com  
 **Phone:** (877) 554-6554
