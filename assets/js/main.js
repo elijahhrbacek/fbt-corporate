@@ -600,8 +600,7 @@ function createTicketRequestModal() {
         <div class="form-row">
           <div class="form-field">
             <label for="ticket-phone">Phone <small>(optional)</small></label>
-            <input id="ticket-phone" name="phone" type="tel" autocomplete="tel" aria-describedby="ticket-phone-hint ticket-phone-error" />
-            <p id="ticket-phone-hint" class="field-hint">Used so we can follow up about your inquiry, including orders, ticket availability, or pricing. Check the box below if you also want SMS messages.</p>
+            <input id="ticket-phone" name="phone" type="tel" autocomplete="tel" aria-describedby="ticket-phone-error" />
             <span id="ticket-phone-error" class="field-error" data-error-for="ticket-phone"></span>
           </div>
           <div class="form-field">
