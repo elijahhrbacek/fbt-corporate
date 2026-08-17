@@ -63,7 +63,7 @@ To add or update an event:
 
 ## Inquiries
 
-Contact and ticket-request forms post to [Formspree](https://formspree.io/) (`https://formspree.io/f/xaewbveq`). Phone number is optional. If the SMS opt-in checkbox is selected, a phone number is required. A honeypot field is included for basic spam filtering.
+Contact and ticket-request forms post to [Formspree](https://formspree.io/) (`https://formspree.io/f/mwlerlod`). Phone number is optional. If the SMS opt-in checkbox is selected, a phone number is required. A honeypot field is included for basic spam filtering.
 
 Arriving at `contact.html` from an event can pre-fill event context via query parameters (for example `?event=<slug>`).
 

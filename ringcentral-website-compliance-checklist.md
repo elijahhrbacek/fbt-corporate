@@ -11,7 +11,7 @@ requirements for SMS (text messaging) registration.
 ## 1. General Website Requirements
 
 - [x] Website is **live and fully accessible** (no "under construction" pages, no broken links)
-      — Site structure is complete. Confirm public URL after deploy. Contact/ticket forms post to Formspree `https://formspree.io/f/xaewbveq`.
+      — Site structure is complete. Confirm public URL after deploy. Contact/ticket forms post to Formspree `https://formspree.io/f/mwlerlod`.
 - [x] The **company/business name** shown on the website **matches exactly** the legal business
       name used in the SMS/TCR registration
       — Confirmed: **Fort Bend Tickets LLC**.

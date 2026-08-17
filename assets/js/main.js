@@ -448,7 +448,7 @@ function createTicketRequestModal() {
       <p class="ticket-modal-intro">Event details are filled in. Add your info and we’ll follow up — there is no online checkout.</p>
       <form
         class="contact-form ticket-request-form"
-        action="https://formspree.io/f/xaewbveq"
+        action="https://formspree.io/f/mwlerlod"
         method="post"
         data-contact-form
         data-ticket-request-form
