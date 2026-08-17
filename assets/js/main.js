@@ -33,7 +33,9 @@ navigation?.addEventListener("click", (event) => {
 document.addEventListener("keydown", (event) => {
   if (event.key !== "Escape") return;
 
-  const openModal = document.querySelector("[data-ticket-modal]:not([hidden])");
+  const openModal = document.querySelector(
+    "[data-ticket-modal]:not([hidden]), [data-inquiry-success-modal]:not([hidden])",
+  );
   if (openModal) return;
 
   closeMenu();
@@ -196,13 +198,29 @@ async function submitContactForm(event) {
     form.reset();
     clearFormErrors(form);
 
-    if (form.hasAttribute("data-ticket-request-form")) {
+    const isTicketRequest = form.hasAttribute("data-ticket-request-form");
+    if (isTicketRequest) {
       fillTicketRequestForm(form, eventContext);
     } else {
       applyEventInquiryContext();
     }
 
-    updateFormStatus(form, "Thank you. Your inquiry has been sent and our team will be in touch.", "success");
+    const status = form.querySelector("[data-form-status]");
+    if (status) {
+      status.textContent = "";
+      status.className = "form-status";
+    }
+
+    closeTicketRequestModalIfOpen();
+    openInquirySuccessModal({
+      kicker: isTicketRequest ? "Request received" : "Inquiry received",
+      title: isTicketRequest
+        ? "Thank you. Your ticket request has been sent."
+        : "Thank you. Your inquiry has been sent.",
+      returnFocus: isTicketRequest
+        ? document.querySelector("[data-ticket-request]")
+        : form.querySelector("[data-submit-button]"),
+    });
   } catch {
     updateFormStatus(
       form,
@@ -214,6 +232,105 @@ async function submitContactForm(event) {
       submitButton.disabled = false;
       submitButton.textContent = defaultLabel;
     }
+  }
+}
+
+let inquirySuccessModal = null;
+let inquirySuccessLastFocus = null;
+
+function closeTicketRequestModalIfOpen() {
+  const ticketModal = document.querySelector("[data-ticket-modal]");
+  if (!(ticketModal instanceof HTMLElement) || ticketModal.hidden) return;
+
+  ticketModal.hidden = true;
+  document.body.classList.remove("modal-open");
+}
+
+function createInquirySuccessModal() {
+  const modal = document.createElement("div");
+  modal.className = "ticket-modal inquiry-success-modal";
+  modal.setAttribute("data-inquiry-success-modal", "");
+  modal.hidden = true;
+  modal.innerHTML = `
+    <div class="ticket-modal-backdrop" data-success-modal-close tabindex="-1"></div>
+    <div
+      class="ticket-modal-dialog inquiry-success-dialog"
+      role="alertdialog"
+      aria-modal="true"
+      aria-labelledby="inquiry-success-heading"
+      aria-describedby="inquiry-success-message"
+      data-success-dialog
+    >
+      <button class="ticket-modal-close" type="button" aria-label="Close confirmation" data-success-modal-close>
+        <span aria-hidden="true">×</span>
+      </button>
+      <div class="inquiry-success-icon" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" focusable="false">
+          <path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </div>
+      <p class="form-kicker" data-success-kicker>Inquiry received</p>
+      <h2 id="inquiry-success-heading" data-success-heading>Thank you. Your inquiry has been sent.</h2>
+      <p id="inquiry-success-message" class="inquiry-success-message">
+        Our team will review the details and follow up with you shortly. There is no online checkout.
+      </p>
+      <button class="button button-primary" type="button" data-success-modal-close data-success-dismiss>
+        Close
+      </button>
+    </div>
+  `;
+
+  document.body.appendChild(modal);
+
+  modal.querySelectorAll("[data-success-modal-close]").forEach((control) => {
+    control.addEventListener("click", closeInquirySuccessModal);
+  });
+
+  document.addEventListener("keydown", (event) => {
+    if (event.key === "Escape" && !modal.hidden) {
+      event.preventDefault();
+      closeInquirySuccessModal();
+    }
+  });
+
+  modal.querySelector("[data-success-dialog]")?.addEventListener("click", (event) => {
+    event.stopPropagation();
+  });
+
+  return modal;
+}
+
+function ensureInquirySuccessModal() {
+  if (!inquirySuccessModal) inquirySuccessModal = createInquirySuccessModal();
+  return inquirySuccessModal;
+}
+
+function openInquirySuccessModal({ kicker, title, returnFocus } = {}) {
+  const modal = ensureInquirySuccessModal();
+  const kickerElement = modal.querySelector("[data-success-kicker]");
+  const heading = modal.querySelector("[data-success-heading]");
+  const dismissButton = modal.querySelector("[data-success-dismiss]");
+
+  inquirySuccessLastFocus = returnFocus instanceof HTMLElement ? returnFocus : document.activeElement;
+
+  if (kickerElement && kicker) kickerElement.textContent = kicker;
+  if (heading && title) heading.textContent = title;
+
+  modal.hidden = false;
+  document.body.classList.add("modal-open");
+
+  if (dismissButton instanceof HTMLElement) dismissButton.focus();
+}
+
+function closeInquirySuccessModal() {
+  const modal = inquirySuccessModal;
+  if (!modal || modal.hidden) return;
+
+  modal.hidden = true;
+  document.body.classList.remove("modal-open");
+
+  if (inquirySuccessLastFocus instanceof HTMLElement && inquirySuccessLastFocus.isConnected) {
+    inquirySuccessLastFocus.focus();
   }
 }
 
@@ -483,7 +600,8 @@ function createTicketRequestModal() {
         <div class="form-row">
           <div class="form-field">
             <label for="ticket-phone">Phone <small>(optional)</small></label>
-            <input id="ticket-phone" name="phone" type="tel" autocomplete="tel" aria-describedby="ticket-phone-error" />
+            <input id="ticket-phone" name="phone" type="tel" autocomplete="tel" aria-describedby="ticket-phone-hint ticket-phone-error" />
+            <p id="ticket-phone-hint" class="field-hint">Used so we can follow up about your inquiry, including orders, ticket availability, or pricing. Check the box below if you also want SMS messages.</p>
             <span id="ticket-phone-error" class="field-error" data-error-for="ticket-phone"></span>
           </div>
           <div class="form-field">
@@ -494,7 +612,7 @@ function createTicketRequestModal() {
         <div class="sms-consent">
           <input id="ticket-sms-consent" name="sms consent" type="checkbox" value="yes" data-sms-consent />
           <label for="ticket-sms-consent">
-            By checking this box, I agree to receive informational and customer-care SMS messages from Fort Bend Tickets LLC at the phone number provided above regarding ticket orders, ticket delivery, digital ticket transfers, event information, and customer support. Message frequency may vary. Message and data rates may apply. Reply STOP to opt out or HELP for assistance. Consent is not a condition of purchase. View our <a href="${prefix}privacy.html">Privacy Policy</a> and <a href="${prefix}terms.html">Terms and Conditions</a>.
+            By checking this box, I agree to receive SMS messages from Fort Bend Tickets LLC at the phone number provided above, including order updates and ticket transfers; customer-support replies about orders, ticket availability, or pricing; delivery notifications; reminders of box office pickup times or event dates; and promotional messages about upcoming ticket sales, presales, or discounts. Message frequency may vary. Message and data rates may apply. Reply STOP to opt out or HELP for assistance. Consent is not a condition of purchase. View our <a href="${prefix}privacy.html">Privacy Policy</a> and <a href="${prefix}terms.html">Terms and Conditions</a>.
           </label>
         </div>
         <div class="form-field">
@@ -509,7 +627,7 @@ function createTicketRequestModal() {
         <input type="hidden" name="_subject" value="Ticket request" />
         <button class="button button-primary form-submit" type="submit" data-submit-button data-default-label="Send request →">Send request <span aria-hidden="true">→</span></button>
         <p class="form-status" role="status" aria-live="polite" data-form-status></p>
-        <p class="form-privacy">By submitting this form, you agree that Fort Bend Tickets may contact you about your inquiry. See our <a href="${prefix}privacy.html">Privacy Policy</a>.</p>
+        <p class="form-privacy">By submitting this form, you agree that Fort Bend Tickets may contact you about your inquiry. If you provide a phone number, we may use it to follow up. SMS messages are sent only if you opt in. See our <a href="${prefix}privacy.html">Privacy Policy</a>.</p>
       </form>
     </div>
   `;

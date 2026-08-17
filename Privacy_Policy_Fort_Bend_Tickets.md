@@ -6,22 +6,21 @@ Fort Bend Tickets LLC ("Fort Bend Tickets," "we," "us," or "our") respects your 
 
 ## SMS Notifications
 
-When you opt in to receive SMS messages from Fort Bend Tickets LLC, we may use the phone number you provide to send transactional and customer-care communications related to our services.
+When you submit an inquiry or ticket request, we may collect the phone number you provide so we can follow up about your request, including orders, ticket availability, or pricing.
 
-These messages may include:
+When you opt in to receive SMS messages from Fort Bend Tickets LLC, we may use that phone number to send messages related to the following:
 
-- Ticket order confirmations and updates
-- Ticket delivery or digital transfer notifications
-- Event-related information
-- Box office or ticket pickup information
-- Customer service communications
-- Responses to ticket-related inquiries
+- Order updates and ticket transfers, including when tickets are transferred, ready for pickup, or need action to accept
+- Customer support replies to inquiries about orders, ticket availability, or pricing
+- Delivery notifications when tickets are ready for pickup or delivered electronically
+- Reminders of box office pickup times or event dates
+- Promotional messages about upcoming ticket sales, presales, or discounts
 
 SMS consent is not a condition of purchase.
 
 **SMS opt-in consent and phone numbers collected for SMS purposes will not be shared with third parties or affiliates for marketing or promotional purposes.**
 
-Message frequency may vary depending on your transactions and interactions with us.
+Message frequency may vary depending on your transactions, customer-service interactions, and promotional campaigns.
 
 Message and data rates may apply.
 
@@ -37,7 +36,7 @@ This may include your:
 
 - Name
 - Email address
-- Phone number
+- Phone number, including numbers submitted on inquiry and ticket-request forms so we can follow up about your request
 - Contact information
 - Information provided when placing or discussing a ticket order
 - Information provided when contacting customer support
@@ -72,7 +71,7 @@ Process and manage ticket-related transactions, orders, customer requests, ticke
 
 ### 2. Communicate With You
 
-Respond to inquiries and provide information regarding orders, tickets, events, delivery, transfers, customer service matters, and other transactions.
+Respond to inquiries and provide information regarding orders, tickets, events, delivery, transfers, customer service matters, and other transactions. Phone numbers submitted through inquiry or ticket-request forms may be used so we can follow up about your request, including orders, ticket availability, or pricing.
 
 ### 3. Improve Our Services
 
@@ -88,9 +87,7 @@ Comply with applicable laws, regulations, legal processes, and governmental requ
 
 ### 6. Marketing and Promotional Communications
 
-Where permitted by applicable law and where any required consent has been obtained, we may send marketing or promotional communications.
-
-Consent to receive transactional or customer-care SMS messages does not constitute consent to receive marketing SMS messages.
+Where permitted by applicable law and where any required consent has been obtained, we may send marketing or promotional communications. If you opt in to SMS, this may include promotional text messages about upcoming ticket sales, presales, or discounts, as described under SMS Notifications.
 
 ## III. How We Disclose Information
 

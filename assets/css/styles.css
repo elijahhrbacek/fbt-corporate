@@ -1091,6 +1091,67 @@ body.modal-open {
   gap: 18px;
 }
 
+.inquiry-success-modal {
+  z-index: 1300;
+}
+
+.inquiry-success-dialog {
+  width: min(100%, 480px);
+  max-height: min(92vh, 640px);
+  padding: clamp(36px, 5vw, 48px) clamp(24px, 4vw, 40px) clamp(32px, 4vw, 40px);
+  text-align: center;
+  animation: inquiry-success-in 220ms ease;
+}
+
+.inquiry-success-icon {
+  display: grid;
+  place-items: center;
+  width: 64px;
+  height: 64px;
+  margin: 0 auto 20px;
+  border-radius: 50%;
+  color: #145c34;
+  background: #e8f5ed;
+}
+
+.inquiry-success-icon svg {
+  width: 32px;
+  height: 32px;
+}
+
+.inquiry-success-dialog .form-kicker {
+  margin-bottom: 10px;
+  padding-right: 0;
+}
+
+.inquiry-success-dialog h2 {
+  margin-bottom: 12px;
+  padding-right: 0;
+  font-size: clamp(1.55rem, 3vw, 2rem);
+}
+
+.inquiry-success-message {
+  margin: 0 0 28px;
+  color: var(--muted);
+  font-size: 1rem;
+}
+
+.inquiry-success-dialog .button {
+  min-width: 160px;
+}
+
+@keyframes inquiry-success-in {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 /* Legal pages */
 .legal-hero {
   min-height: 390px;
@@ -1714,6 +1775,14 @@ body.modal-open {
   border-color: var(--red-700);
 }
 
+.field-hint {
+  margin: 6px 0 0;
+  color: var(--muted);
+  font-size: 0.73rem;
+  font-weight: 500;
+  line-height: 1.4;
+}
+
 .field-error {
   min-height: 18px;
   margin-top: 4px;
@@ -2294,5 +2363,9 @@ body.modal-open {
   *::after {
     scroll-behavior: auto !important;
     transition-duration: 0.01ms !important;
+  }
+
+  .inquiry-success-dialog {
+    animation: none;
   }
 }

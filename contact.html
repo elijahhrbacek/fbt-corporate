@@ -82,7 +82,8 @@
               <div class="form-row">
                 <div class="form-field">
                   <label for="phone">Phone <small>(optional)</small></label>
-                  <input id="phone" name="phone" type="tel" autocomplete="tel" aria-describedby="phone-error" />
+                  <input id="phone" name="phone" type="tel" autocomplete="tel" aria-describedby="phone-hint phone-error" />
+                  <p id="phone-hint" class="field-hint">Used so we can follow up about your inquiry, including orders, ticket availability, or pricing. Check the box below if you also want SMS messages.</p>
                   <span id="phone-error" class="field-error" data-error-for="phone"></span>
                 </div>
                 <div class="form-field">
@@ -93,7 +94,7 @@
               <div class="sms-consent">
                 <input id="sms-consent" name="sms consent" type="checkbox" value="yes" data-sms-consent />
                 <label for="sms-consent">
-                  By checking this box, I agree to receive informational and customer-care SMS messages from Fort Bend Tickets LLC at the phone number provided above regarding ticket orders, ticket delivery, digital ticket transfers, event information, and customer support. Message frequency may vary. Message and data rates may apply. Reply STOP to opt out or HELP for assistance. Consent is not a condition of purchase. View our <a href="privacy.html">Privacy Policy</a> and <a href="terms.html">Terms and Conditions</a>.
+                  By checking this box, I agree to receive SMS messages from Fort Bend Tickets LLC at the phone number provided above, including order updates and ticket transfers; customer-support replies about orders, ticket availability, or pricing; delivery notifications; reminders of box office pickup times or event dates; and promotional messages about upcoming ticket sales, presales, or discounts. Message frequency may vary. Message and data rates may apply. Reply STOP to opt out or HELP for assistance. Consent is not a condition of purchase. View our <a href="privacy.html">Privacy Policy</a> and <a href="terms.html">Terms and Conditions</a>.
                 </label>
               </div>
               <div class="form-field">
@@ -108,7 +109,7 @@
               <input type="hidden" name="_subject" value="New Fort Bend Tickets website inquiry" />
               <button class="button button-primary form-submit" type="submit" data-submit-button>Send inquiry <span aria-hidden="true">→</span></button>
               <p class="form-status" role="status" aria-live="polite" data-form-status></p>
-              <p class="form-privacy">By submitting this form, you agree that Fort Bend Tickets may contact you about your inquiry. See our <a href="privacy.html">Privacy Policy</a>.</p>
+              <p class="form-privacy">By submitting this form, you agree that Fort Bend Tickets may contact you about your inquiry. If you provide a phone number, we may use it to follow up. SMS messages are sent only if you opt in. See our <a href="privacy.html">Privacy Policy</a>.</p>
             </form>
           </div>
         </div>

@@ -102,7 +102,7 @@ Information may be used as reasonably necessary to process transactions, provide
 
 ### SMS and Communication Consent
 
-If you opt in to receive SMS communications from Fort Bend Tickets LLC, we may use the phone number you provide to send informational, transactional, and customer-care messages related to our ticketing services.
+If you opt in to receive SMS communications from Fort Bend Tickets LLC, we may use the phone number you provide to send messages related to order updates and ticket transfers, customer support (including replies about orders, ticket availability, or pricing), delivery notifications, reminders of box office pickup times or event dates, and promotional messages about upcoming ticket sales, presales, or discounts.
 
 No mobile opt-in information or text message consent will be shared with third parties or affiliates for marketing or promotional purposes.
 
@@ -112,7 +112,7 @@ Consent to receive SMS messages is not a condition of purchase.
 
 ### SMS Consent
 
-By opting in to receive SMS communications from Fort Bend Tickets LLC, you agree to receive informational, transactional, and customer-care text messages related to ticket orders, ticket delivery, digital ticket transfers, event information, box office or ticket pickup information, and customer support.
+By opting in to receive SMS communications from Fort Bend Tickets LLC, you agree to receive text messages related to order updates and ticket transfers, customer support (including replies about orders, ticket availability, or pricing), delivery notifications, reminders of box office pickup times or event dates, and promotional messages about upcoming ticket sales, presales, or discounts.
 
 No mobile opt-in information or text message consent will be shared with third parties or affiliates for marketing or promotional purposes.
 
@@ -122,18 +122,15 @@ Consent to receive SMS messages is not a condition of purchase.
 
 Customers who provide consent may receive messages regarding:
 
-- Ticket order confirmations
-- Ticket order status updates
-- Digital ticket transfers
-- Ticket delivery information
-- Event-related order information
-- Box office or ticket pickup instructions
-- Customer-service communications
-- Responses to ticket-related inquiries
+- Order updates and ticket transfers, including when tickets are transferred, ready for pickup, or need action to accept
+- Customer support replies to inquiries about orders, ticket availability, or pricing
+- Delivery notifications when tickets are ready for pickup or delivered electronically
+- Reminders of box office pickup times or event dates
+- Promotional messages about upcoming ticket sales, presales, or discounts
 
 ### Message Frequency
 
-Message frequency may vary depending on your ticket orders, delivery status, event schedules, and customer-service interactions.
+Message frequency may vary depending on your ticket orders, delivery status, event schedules, customer-service interactions, and promotional campaigns.
 
 ### Message and Data Rates
 
@@ -145,7 +142,7 @@ Customers may opt in to receive SMS communications from Fort Bend Tickets LLC by
 
 The SMS consent checkbox is optional and is not selected by default.
 
-By checking the SMS consent checkbox, you expressly consent to receive informational, transactional, and customer-care SMS messages from Fort Bend Tickets LLC at the phone number you provide.
+By checking the SMS consent checkbox, you expressly consent to receive SMS messages from Fort Bend Tickets LLC at the phone number you provide, including order updates and ticket transfers, customer-support replies, delivery notifications, box office or event-date reminders, and promotional messages about upcoming ticket sales, presales, or discounts.
 
 Consent to receive SMS messages is not a condition of purchasing tickets, products, or services.
 
