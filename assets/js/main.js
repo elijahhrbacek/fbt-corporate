@@ -188,8 +188,7 @@ async function submitContactForm(event) {
     if (!response.ok) throw new Error("Form submission failed");
 
     const eventContext = {
-      slug: form.querySelector('[name="event_slug"]')?.value || "",
-      name: form.querySelector('[name="event_name"]')?.value || "",
+      name: form.querySelector('[name="event name"]')?.value || "",
       date: form.querySelector('[name="event_date"]')?.value || "",
       time: form.querySelector('[name="event_time"]')?.value || "",
     };
@@ -356,7 +355,6 @@ function applyEventInquiryContext() {
   const eventNameField = contactForm.querySelector("#event-name");
   const eventDateField = contactForm.querySelector("#event-date");
   const eventTimeField = contactForm.querySelector("#event-time");
-  const eventSlugField = contactForm.querySelector("[data-event-slug]");
   const messageField = contactForm.querySelector("[data-message-field]");
   const subjectLine = contactForm.querySelector('input[name="_subject"]');
   const formKicker = document.querySelector("[data-form-kicker]");
@@ -375,7 +373,6 @@ function applyEventInquiryContext() {
     eventTimeField.value = eventTime;
     eventTimeField.closest(".form-field")?.toggleAttribute("hidden", !eventTime);
   }
-  if (eventSlugField instanceof HTMLInputElement) eventSlugField.value = slug;
 
   const datetimeRow = eventDateField?.closest(".form-row");
   if (datetimeRow instanceof HTMLElement) {
@@ -399,10 +396,9 @@ function applyEventInquiryContext() {
 }
 
 function fillTicketRequestForm(form, event) {
-  const nameField = form.querySelector('[name="event_name"]');
+  const nameField = form.querySelector('[name="event name"]');
   const dateField = form.querySelector('[name="event_date"]');
   const timeField = form.querySelector('[name="event_time"]');
-  const slugField = form.querySelector('[name="event_slug"]');
   const subjectLine = form.querySelector('input[name="_subject"]');
   const messageField = form.querySelector("[data-message-field]");
   const heading = form.closest("[data-ticket-modal]")?.querySelector("[data-modal-heading]");
@@ -413,7 +409,6 @@ function fillTicketRequestForm(form, event) {
     timeField.value = event.time || "";
     timeField.closest(".form-field")?.toggleAttribute("hidden", !event.time);
   }
-  if (slugField instanceof HTMLInputElement) slugField.value = event.slug || "";
 
   if (subjectLine instanceof HTMLInputElement) {
     subjectLine.value = event.name ? `Ticket request: ${event.name}` : "Ticket request";
@@ -461,8 +456,7 @@ function createTicketRequestModal() {
       >
         <div class="form-field">
           <label for="ticket-event-name">Event</label>
-          <input id="ticket-event-name" name="event_name" type="text" readonly />
-          <input type="hidden" name="event_slug" />
+          <input id="ticket-event-name" name="event name" type="text" readonly />
         </div>
         <div class="form-row">
           <div class="form-field">
@@ -498,7 +492,7 @@ function createTicketRequestModal() {
           </div>
         </div>
         <div class="sms-consent">
-          <input id="ticket-sms-consent" name="sms_consent" type="checkbox" value="yes" data-sms-consent />
+          <input id="ticket-sms-consent" name="sms consent" type="checkbox" value="yes" data-sms-consent />
           <label for="ticket-sms-consent">
             By checking this box, I agree to receive informational and customer-care SMS messages from Fort Bend Tickets LLC at the phone number provided above regarding ticket orders, ticket delivery, digital ticket transfers, event information, and customer support. Message frequency may vary. Message and data rates may apply. Reply STOP to opt out or HELP for assistance. Consent is not a condition of purchase. View our <a href="${prefix}privacy.html">Privacy Policy</a> and <a href="${prefix}terms.html">Terms and Conditions</a>.
           </label>
