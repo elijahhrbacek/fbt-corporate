@@ -1,6 +1,6 @@
 # Fort Bend Tickets
 
-Marketing website for **Fort Bend Tickets LLC**, a Texas-based ticket broker. Visitors can browse upcoming events, read event details, and request tickets. There is **no online checkout**, cart, or payment flow — inquiries go to the team via contact forms.
+A Corporate website for **Fort Bend Tickets LLC**, a Texas-based ticket broker. Visitors can browse upcoming events, read event details, and request tickets. There is **no online checkout**, cart, or payment flow — inquiries go to the team via contact forms.
 
 Live site: [fortbendtickets.com](https://fortbendtickets.com/)
 
